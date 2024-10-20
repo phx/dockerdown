@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Directory Listing</title>
+    <link id="themeStylesheet" rel="stylesheet" href="/css/github.css"> <!-- Default style -->
+</head>
+<body>
+
+<!-- Dropdown to select theme -->
+<label for="styleSelect">Choose a theme:</label>
+<select id="styleSelect" onchange="changeStyle()">
+    <option value="github">GitHub</option>
+    <option value="monokai">Monokai</option>
+    <option value="dracula">Dracula</option>
+    <option value="solarized-light">Solarized Light</option>
+    <option value="solarized-dark">Solarized Dark</option>
+    <option value="night-owl">Night Owl</option>
+    <option value="nord">Nord</option>
+    <option value="one-dark-pro">One Dark Pro</option>
+    <option value="material-dark">Material Dark</option>
+    <option value="gruvbox">Gruvbox</option>
+    <option value="ayu-dark">Ayu Dark</option>
+    <option value="horizon">Horizon</option>
+    <option value="oceanic-next">Oceanic Next</option>
+    <option value="palenight">Palenight</option>
+</select>
+
+<script>
+    function changeStyle() {
+        var selectedStyle = document.getElementById('styleSelect').value;
+        document.getElementById('themeStylesheet').setAttribute('href', '/css/' + selectedStyle + '.css');
+        
+        // Save the selected style in localStorage so it persists across page loads
+        localStorage.setItem('selectedStyle', selectedStyle);
+    }
+
+    window.onload = function() {
+        var savedStyle = localStorage.getItem('selectedStyle');
+        if (savedStyle) {
+            document.getElementById('themeStylesheet').setAttribute('href', '/css/' + savedStyle + '.css');
+            document.getElementById('styleSelect').value = savedStyle;
+        }
+    }
+</script>

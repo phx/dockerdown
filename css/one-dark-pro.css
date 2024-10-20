@@ -1,0 +1,25 @@
+/* One Dark Pro Theme */
+body {
+    font-family: "Fira Code", monospace;
+    background-color: #282c34;
+    color: #abb2bf;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #e06c75;
+}
+
+pre, code {
+    background-color: #2c323c;
+    color: #abb2bf;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+a {
+    color: #61afef;
+}
+
+a:hover {
+    color: #c678dd;
+}

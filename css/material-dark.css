@@ -1,0 +1,25 @@
+/* Material Dark Theme */
+body {
+    font-family: "Roboto Mono", monospace;
+    background-color: #263238;
+    color: #eeffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #80cbc4;
+}
+
+pre, code {
+    background-color: #37474f;
+    color: #eeffff;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+a {
+    color: #82b1ff;
+}
+
+a:hover {
+    color: #ffcc80;
+}

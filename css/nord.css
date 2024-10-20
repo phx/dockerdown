@@ -1,0 +1,25 @@
+/* Nord Theme */
+body {
+    font-family: "Roboto Mono", monospace;
+    background-color: #2e3440;
+    color: #d8dee9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #88c0d0;
+}
+
+pre, code {
+    background-color: #3b4252;
+    color: #d8dee9;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+a {
+    color: #8fbcbb;
+}
+
+a:hover {
+    color: #88c0d0;
+}

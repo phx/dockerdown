@@ -1,0 +1,25 @@
+/* Solarized Dark Theme */
+body {
+    font-family: "Source Code Pro", monospace;
+    background-color: #002b36;
+    color: #839496;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #b58900;
+}
+
+pre, code {
+    background-color: #073642;
+    color: #93a1a1;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+a {
+    color: #268bd2;
+}
+
+a:hover {
+    color: #2aa198;
+}

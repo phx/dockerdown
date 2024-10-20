@@ -1,0 +1,25 @@
+/* Ayu Dark Theme */
+body {
+    font-family: "Source Code Pro", monospace;
+    background-color: #0a0e14;
+    color: #b3b1ad;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffcc66;
+}
+
+pre, code {
+    background-color: #0d1016;
+    color: #e6e1cf;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+a {
+    color: #73d0ff;
+}
+
+a:hover {
+    color: #ff7733;
+}

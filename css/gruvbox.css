@@ -1,0 +1,25 @@
+/* Gruvbox Theme */
+body {
+    font-family: "Fira Code", monospace;
+    background-color: #282828;
+    color: #ebdbb2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fe8019;
+}
+
+pre, code {
+    background-color: #3c3836;
+    color: #ebdbb2;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+a {
+    color: #fabd2f;
+}
+
+a:hover {
+    color: #8ec07c;
+}

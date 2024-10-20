@@ -1,0 +1,25 @@
+/* Solarized Light Theme */
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: #fdf6e3;
+    color: #657b83;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #b58900;
+}
+
+pre, code {
+    background-color: #eee8d5;
+    color: #586e75;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+a {
+    color: #268bd2;
+}
+
+a:hover {
+    color: #2aa198;
+}

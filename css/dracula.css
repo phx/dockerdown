@@ -1,0 +1,25 @@
+/* Dracula Theme */
+body {
+    font-family: "Fira Code", monospace;
+    background-color: #282a36;
+    color: #f8f8f2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ff79c6;
+}
+
+pre, code {
+    background-color: #44475a;
+    color: #f8f8f2;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+a {
+    color: #8be9fd;
+}
+
+a:hover {
+    color: #50fa7b;
+}

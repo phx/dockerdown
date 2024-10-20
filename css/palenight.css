@@ -1,0 +1,25 @@
+/* Palenight Theme */
+body {
+    font-family: "JetBrains Mono", monospace;
+    background-color: #292d3e;
+    color: #a6accd;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #c792ea;
+}
+
+pre, code {
+    background-color: #444267;
+    color: #a6accd;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+a {
+    color: #82aaff;
+}
+
+a:hover {
+    color: #ffcb6b;
+}

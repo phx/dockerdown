@@ -1,0 +1,25 @@
+/* Horizon Theme */
+body {
+    font-family: "Fira Code", monospace;
+    background-color: #1c1e26;
+    color: #e3e1e4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #f43e5c;
+}
+
+pre, code {
+    background-color: #232530;
+    color: #e3e1e4;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+a {
+    color: #f9cbbd;
+}
+
+a:hover {
+    color: #f43e5c;
+}

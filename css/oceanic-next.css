@@ -1,0 +1,25 @@
+/* Oceanic Next Theme */
+body {
+    font-family: "Source Code Pro", monospace;
+    background-color: #1b2b34;
+    color: #d8dee9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #6699cc;
+}
+
+pre, code {
+    background-color: #343d46;
+    color: #d8dee9;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+a {
+    color: #99c794;
+}
+
+a:hover {
+    color: #ec5f67;
+}

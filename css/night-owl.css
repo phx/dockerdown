@@ -1,0 +1,25 @@
+/* Night Owl Theme */
+body {
+    font-family: "JetBrains Mono", monospace;
+    background-color: #011627;
+    color: #d6deeb;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #82aaff;
+}
+
+pre, code {
+    background-color: #011627;
+    color: #d6deeb;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+a {
+    color: #7fdbca;
+}
+
+a:hover {
+    color: #21c7a8;
+}

@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Function to display usage instructions
+usage() {
+    echo "Usage: $0 -p <port> -d <directory> [-q]"
+    echo "    -p  Specify the port to expose (default: 8080)"
+    echo "    -d  Specify the directory to mount into the container"
+    echo "    -q  Enable quiet mode (optional)"
+    exit 1
+}
+
+# Default values
+PORT=8080
+DIRECTORY=""
+QUIET="false"
+
+# Parse command-line arguments
+while getopts "p:d:q" opt; do
+    case "${opt}" in
+        p)
+            PORT=${OPTARG}
+            ;;
+        d)
+            DIRECTORY=${OPTARG}
+            ;;
+        q)
+            QUIET="true"
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+
+# Check if directory is provided and exists
+if [ -z "${DIRECTORY}" ]; then
+    echo "Error: Directory not specified."
+    usage
+elif [ ! -d "${DIRECTORY}" ]; then
+    echo "Error: Directory '${DIRECTORY}' does not exist."
+    exit 1
+fi
+
+# Display messages if not in quiet mode
+if [ "${QUIET}" != "true" ]; then
+  echo "Starting Docker container on port ${PORT} with directory ${DIRECTORY}..."
+  docker run --rm --name dockerdown -p ${PORT}:80 -v "${DIRECTORY}:/usr/local/nginx/html/files" lphxl/dockerdown:latest
+else
+  echo "Running in quiet mode."
+  docker run -d --rm --name dockerdown -p ${PORT}:80 -v "${DIRECTORY}:/usr/local/nginx/html/files" lphxl/dockerdown:latest
+fi
