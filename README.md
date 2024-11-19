@@ -17,9 +17,11 @@ rm -rf dockerdown
 - Pre-requisite: Docker
 
 ```
-Usage: ./dockerdown -p <port> -d <directory> [-q]
+Usage: ./dockerdown -p <port> -d <directory> [-n <name>] [-q] [-h]
     -p  Specify the port to expose (default: 8080)
     -d  Specify the directory to mount into the container
+    -n  Specify the container name (default: dockerdown)
     -q  Enable quiet mode (optional)
+    -h  Display this help message
 ```
 

@@ -18,7 +18,7 @@ NAME="dockerdown"
 QUIET="false"
 
 # Parse command-line arguments
-while getopts ":p:d:n:qh" opt; do    # Added colon at start to handle errors better
+while getopts "p:d:n:qh" opt; do
     case "${opt}" in
         p)
             PORT=${OPTARG}
@@ -35,13 +35,8 @@ while getopts ":p:d:n:qh" opt; do    # Added colon at start to handle errors bet
         h)
             usage 0  # Exit with status code 0 for help
             ;;
-        \?)
-            echo "Invalid option: -$OPTARG" >&2
-            usage 1
-            ;;
-        :)
-            echo "Option -$OPTARG requires an argument." >&2
-            usage 1
+        *)
+            usage 1  # Exit with status code 1 for errors
             ;;
     esac
 done
@@ -62,4 +57,4 @@ if [ "${QUIET}" != "true" ]; then
 else
   echo "Running in quiet mode."
   docker run -d --rm --name ${NAME} -p ${PORT}:80 -v "${DIRECTORY}:/usr/local/nginx/html/files" lphxl/dockerdown:latest
-fi
+fi 

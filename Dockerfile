@@ -13,7 +13,11 @@ RUN apt-get update && apt-get install -y \
     fcgiwrap \
     spawn-fcgi \
     nginx-extras \
-    supervisor
+    supervisor \
+    npm \
+    lua5.4 \
+    sed \
+    && npm install -g @mermaid-js/mermaid-cli
 
 # Copy Nginx configuration
 COPY nginx.conf /usr/local/nginx/conf/nginx.conf
@@ -26,16 +30,22 @@ COPY css /usr/local/nginx/html/css
 
 # Move FancyIndex header and footer to /usr/local/nginx/html (simplified directory)
 RUN rm -f /usr/local/nginx/html/*.html
-COPY fancyindex_header.html /usr/local/nginx/html/fancyindex_header.html
-COPY fancyindex_footer.html /usr/local/nginx/html/fancyindex_footer.html
+
+COPY fancyindex /usr/local/nginx/html/fancyindex
 COPY mime.types /usr/local/nginx/conf/mime.types
 
 # Set permissions for header and footer in the correct directory
-RUN chmod 644 /usr/local/nginx/html/fancyindex_header.html /usr/local/nginx/html/fancyindex_footer.html
+RUN chmod -R 644 /usr/local/nginx/html/fancyindex/fancyindex-dark
+RUN chmod 755 /usr/local/nginx/html/fancyindex/fancyindex-dark
+RUN chmod -R 644 /usr/local/nginx/html/fancyindex/fancyindex-light
+RUN chmod 755 /usr/local/nginx/html/fancyindex/fancyindex-light
 
 # Copy the shell script for rendering Markdown
 COPY scripts/render_markdown.sh /usr/local/bin/render_markdown.sh
 RUN chmod +x /usr/local/bin/render_markdown.sh
+
+# Create directory for temporary files with proper permissions
+RUN mkdir -p /tmp/pandoc && chmod 777 /tmp/pandoc
 
 # Expose port 80
 EXPOSE 80
