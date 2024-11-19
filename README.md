@@ -8,7 +8,7 @@ A Docker-based Nginx server that uses the fancyindex module with custom Markdown
 
 ```sh
 git clone https://github.com/phx/dockerdown
-sudo mv dockerdown/dockerdown /usr/local/bin/
+sudo cp dockerdown/dockerdown /usr/local/bin/
 rm -rf dockerdown
 ```
 
